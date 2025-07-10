@@ -1,26 +1,22 @@
 
-//recuoero il pulsante per inviare i dati della form
+
+document.getElementById("genera").addEventListener("click", (e) => {
+  const km = parseFloat(document.getElementById("km").value);
+  const age = parseInt(document.getElementById("age").value);
 
 
+  e.preventDefault();
+        if (km > 0 && age > 0) {
+          let prezzo = km * 0.21;
 
-//calcolare il prezzo del biglietto
-const ticketPrice = km * 0.21; 
-console.log(ticketPrice);
+          if (age < 18) {
+            prezzo *= 0.8;
+          } else if (age > 65) {
+            prezzo *= 0.6;
+          }
 
-
-//dichiaro variabile discount=0 (0 sta per l'età compresa tra 18 e 65, dove non si applica lo sconto) 
-let discount = 0;
-//determinare se applicare uno sconto
-if (age > 65) {
-  discount = ticketPrice * 0.4;
-}
-else if (age < 18) {
-  discount = ticketPrice * 0.2;
-}
-else {
-  discount = 0;
-}
-
-//calcolare il prezzo finale e stampare risultato
-const finalPrice = ticketPrice - discount;
-console.log(`Il prezzo finale è €${finalPrice.toFixed(2)}`);
+          console.log('Prezzo del biglietto: € ' + prezzo.toFixed(2));
+        } else {
+          console.log('Errore: inserisci valori validi maggiori di 0.');
+        }
+      });

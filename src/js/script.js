@@ -1,8 +1,11 @@
-document.getElementById('calcola').addEventListener('click', function() {
+document.getElementById('calcola').addEventListener('click', function(e) {
+    e.preventDefault();
+    
         const nome = document.getElementById('nome').value;
         const km = document.getElementById('km').value;
         const age = document.getElementById('age').value;
         const output = document.getElementById('output');
+
 
         // Validazione base: km e age devono essere numeri > 0
         if (km > 0 && age > 0) {
@@ -19,8 +22,8 @@ document.getElementById('calcola').addEventListener('click', function() {
 
           // Mostra in pagina
           output.innerHTML = `
-            <p>NomeCognome: ${nome}</p>
-            <p>Kilometri: ${km}</p>
+            <p>Nome e Cognome: ${nome}</p>
+            <p>Chilometri: ${km}</p>
             <p>Età: ${age}</p>
             <p>Prezzo del biglietto: € ${prezzo}</p>
           `;

@@ -1,9 +1,0 @@
-.container-big {
-    max-width: 1600px;
-}
-
-.container-small {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: red;
-}

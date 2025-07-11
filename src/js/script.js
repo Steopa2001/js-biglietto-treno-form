@@ -29,7 +29,7 @@ calcola.addEventListener("click", (e) => {
   }
 
   risultato.innerHTML = `
-  <table border="1">
+  <table border="1" class= 'col-12'>
       <thead>
         <tr>
           <th>Nome e Cognome</th>

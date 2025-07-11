@@ -1,49 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
-    <link rel="stylesheet" href="./src/css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="./src/css/style.css" />
     <title>Document</title>
-</head>
-<body>
-    
+  </head>
+  <body>
     <div class="container-small">
-        <form action="">
-        <div class="row">
-            
-     <h2>CALCOLA IL PREZZO DEL TUO BIGLIETTO</h2>
-
-     <div class="col-4">
-    <label for="km">Nome Cognome</label>
-    <input type="text" id="nome" name="nome" placeholder="inserisci nome e cognome">
+      <div class="row">
+        <div class="col-12">
+          <form action="" id="myForm">
+            <div class="row">
+              <div class="col-12 col-md-4">
+                <label for="" class="form-lable">Nome e Cognome</label>
+                <input
+                  required
+                  type="text"
+                  name="name"
+                  id="name"
+                  min="0"
+                  class="form-control"
+                  placeholder="iserisci nome e cognome"
+                />
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="" class="form-lable">km</label>
+                <input
+                  required
+                  type="number"
+                  name="km"
+                  id="km"
+                  min="0"
+                  class="form-control"
+                  placeholder="inserisci i km da percorrere"
+                />
+              </div>
+              <div class="col-12 col-md-4">
+                <label for="" class="form-lable">fascia d'età</label>
+                <input
+                  required
+                  type="text"
+                  name="km"
+                  id="eta"
+                  min="0"
+                  class="form-control"
+                  placeholder="inserisci l'età"
+                />
+                <!-- <select name="eta" id="eta" class="form-select" aria-label="Default select example" required>
+                  <option selected>Seleziona età</option>
+                  <option value="1">under 18</option>
+                  <option value="2">over 65</option>
+                  <option value="3">maggiorenne</option>
+                </select> -->
+              </div>
+              <div class="col-12 text-center mt-5">
+                <button type="submit" class="btn btn-primary" id="calcola">Calcola</button>
+                <button type="submit" class="btn btn-danger" id="annulla">Annulla</button>
+              </div>
+              
+            </div>
+          </form>
+        </div>
+        <div class="col-12 mt-5">
+            <div id="result"></div>
+        </div>
+      </div>
     </div>
-
-    <div class="col-4">
-    <label for="age">Km da percorrere</label>
-    <input type="text" id="km" name="km" placeholder="inserisci i chilometri">
-    </div>
-
-    <div class="col-4">
-    <label for="age">Età del passeggero:</label>
-    <input type="number" id="age" name="eta" placeholder="inserisci l'età">
-    </div>
-
-    <div class="mt-5 d-flex justify-content-center">
-    <button type="submit" id="calcola">Calcola Prezzo</button>
-    </div>
-
-    <h3>RISUKTATO:</h3>
-    <div id="output"></div>
-
-</div>
-</form>
-    </div>
-
-    
-
 
     <script src="./src/js/script.js"></script>
-</body>
+  </body>
 </html>

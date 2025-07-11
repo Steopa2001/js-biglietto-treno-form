@@ -2,3 +2,7 @@
     max-width: 800px;
     margin: 20px auto;
 }
+
+#result th, td {
+padding: 10px 10px;
+}
